@@ -1,4 +1,4 @@
-name: IPQ807X-NOWIFI
+name: IPQ807X-NOWIFI测试
 
 on:
   workflow_dispatch:
@@ -14,7 +14,7 @@ env:
   CACHE_TOOLCHAIN: true
   UPLOAD_BIN_DIR: true
   FIRMWARE_RELEASE: true
-  FIRMWARE_TAG: IPQ807X-NOWIFI
+  FIRMWARE_TAG: IPQ807X-NOWIFICESHI
   TZ: Asia/Shanghai
 
 jobs:
