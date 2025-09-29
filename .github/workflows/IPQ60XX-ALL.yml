@@ -8,6 +8,8 @@ on:
 env:
   REPO_URL: https://github.com/innmonkeyone/openwrt-6.x.git
   REPO_BRANCH: k6.12-nss
+  CONFIG_FILE: configs/ceshi.config
+  PATCHES_FILE_1: patches/0001-show-soc-status-on-luci.patch
   CLASH_KERNEL: amd64
   CACHE_TOOLCHAIN: true
   UPLOAD_BIN_DIR: true
