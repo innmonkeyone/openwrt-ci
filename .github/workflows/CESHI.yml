@@ -1,5 +1,7 @@
 name: IPQ807X-CESHI
 
+on:
+
 env:
   REPO_URL: https://github.com/innmonkeyone/openwrt-6.x.git
   REPO_BRANCH: k6.12-nss
