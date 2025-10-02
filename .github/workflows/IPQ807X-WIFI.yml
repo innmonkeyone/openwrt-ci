@@ -1,6 +1,6 @@
 name: IPQ807X-WIFI
 
-# on:
+on:
 #   workflow_dispatch:
 #   schedule:
 #     - cron: 0 19 * * *
