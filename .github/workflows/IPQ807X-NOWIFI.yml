@@ -1,8 +1,8 @@
 name: IPQ807X-NOWIFI
 
-# on:
-#   workflow_dispatch:
-#  schedule:
+on:
+   workflow_dispatch:
+  schedule:
 #     - cron: 0 19 * * *
 
 env:
