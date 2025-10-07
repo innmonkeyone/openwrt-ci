@@ -124,5 +124,8 @@ find package/luci-theme-*/* -type f -name '*luci-theme-*' -print -exec sed -i '/
 # sed -i 's/services/vpn/g' feeds/luci/applications/luci-app-v2ray-server/luasrc/model/cbi/v2ray_server/*.lua
 # sed -i 's/services/vpn/g' feeds/luci/applications/luci-app-v2ray-server/luasrc/view/v2ray_server/*.htm
 
+# 加入OpenClash核心
+chmod -R a+x $GITHUB_WORKSPACE/preset-clash-core.sh
+$GITHUB_WORKSPACE/preset-clash-core.sh
 ./scripts/feeds update -a
 ./scripts/feeds install -a
