@@ -3,7 +3,7 @@ name: IPQ807X-WIFI
 on:
    workflow_dispatch:
    schedule:
-     - cron: 0 19 * * *
+     - cron: 0 0 1 * *
 
 env:
   REPO_URL: https://github.com/innmonkeyone/openwrt-6.x.git
