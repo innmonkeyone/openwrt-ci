@@ -18,9 +18,6 @@ function git_sparse_clone() {
 #git clone  https://github.com/gdy666/luci-app-lucky.git package/lucky
 #git_sparse_clone master https://github.com/vernesong/OpenClash luci-app-openclash
 
-# Themes
-# git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
-# git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
 
 # 更改 Argon 主题背景
 # cp -f $GITHUB_WORKSPACE/images/bg1.jpg package/luci-theme-argon/htdocs/luci-static/argon/img/bg1.jpg
@@ -30,9 +27,6 @@ function git_sparse_clone() {
 
 # 在线用户
 git_sparse_clone main https://github.com/haiibo/packages luci-app-onliner
-sed -i '$i uci set nlbwmon.@nlbwmon[0].refresh_interval=2s' package/lean/default-settings/files/zzz-default-settings
-sed -i '$i uci commit nlbwmon' package/lean/default-settings/files/zzz-default-settings
-chmod 755 package/luci-app-onliner/root/usr/share/onliner/setnlbw.sh
 
 echo "
 # 插件
@@ -77,7 +71,8 @@ sed -i 's/luci-theme-design/luci-theme-argon/g' feeds/luci/collections/luci/Make
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
 
 # 加入OpenClash核心
-chmod -R a+x $GITHUB_WORKSPACE/preset-clash-core.sh
-$GITHUB_WORKSPACE/preset-clash-core.sh
+#chmod -R a+x $GITHUB_WORKSPACE/preset-clash-core.sh
+#$GITHUB_WORKSPACE/preset-clash-core.sh
+
 ./scripts/feeds update -a
 ./scripts/feeds install -a
