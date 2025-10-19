@@ -30,11 +30,11 @@ git_sparse_clone main https://github.com/haiibo/packages luci-app-onliner
 
 echo "
 # 插件
-#CONFIG_PACKAGE_luci-app-adguardhome=y
-#CONFIG_PACKAGE_luci-app-wechatpush=y
-#CONFIG_PACKAGE_luci-app-lucky=y
-#CONFIG_PACKAGE_luci-app-openclash=y
-#CONFIG_PACKAGE_luci-app-onliner=y
+CONFIG_PACKAGE_luci-app-adguardhome=y
+CONFIG_PACKAGE_luci-app-wechatpush=y
+CONFIG_PACKAGE_luci-app-lucky=y
+CONFIG_PACKAGE_luci-app-openclash=y
+CONFIG_PACKAGE_luci-app-onliner=y
 " >> .config
 
 # 修改默认IP
