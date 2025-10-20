@@ -30,6 +30,7 @@ git_sparse_clone main https://github.com/haiibo/packages luci-app-onliner
 
 echo "
 # 插件
+CONFIG_PACKAGE_luci-app-smartdns=y 
 CONFIG_PACKAGE_luci-app-adguardhome=y
 CONFIG_PACKAGE_luci-app-wechatpush=y
 CONFIG_PACKAGE_luci-app-lucky=y
@@ -38,7 +39,7 @@ CONFIG_PACKAGE_luci-app-onliner=y
 " >> .config
 
 # 修改默认IP
-# sed -i 's/192.168.1.1/10.0.0.1/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generate
 
 # 更改默认 Shell 为 zsh
 # sed -i 's/\/bin\/ash/\/usr\/bin\/zsh/g' package/base-files/files/etc/passwd
