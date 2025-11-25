@@ -7,7 +7,7 @@ on:
 env:
   REPO_URL: https://github.com/innmonkeyone/openwrt-6.x.git
   REPO_BRANCH: k6.12-nss
-  CONFIG_FILE: configs/IPQ807X-nowifi.config
+  CONFIG_FILE: configs/test.config
   DIY_SCRIPT: diy-script.sh
   CLASH_KERNEL: arm64
   CACHE_TOOLCHAIN: true
