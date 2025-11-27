@@ -26,7 +26,7 @@ git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-onliner 
 echo "
 # 插件
 #CONFIG_PACKAGE_luci-app-smartdns=y
-#CONFIG_PACKAGE_luci-app-openclash=y
+CONFIG_PACKAGE_luci-app-openclash=m
 CONFIG_PACKAGE_luci-app-adguardhome=y
 CONFIG_PACKAGE_luci-app-wechatpush=y
 CONFIG_PACKAGE_luci-app-lucky=y
