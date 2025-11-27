@@ -7,7 +7,7 @@ on:
 
 env:
   REPO_URL: https://github.com/innmonkeyone/openwrt-6.x.git
-  REPO_BRANCH: k6.12-nss-inseego-fg2000
+  REPO_BRANCH: k6.12-nss
   CONFIG_FILE: configs/test.config
   FILES: files
   DIY_SCRIPT: diy-script.sh
@@ -167,7 +167,7 @@ jobs:
           - 💻 这是 ${{ env.FIRMWARE_TAG }} 平台使用的 OpenWrt 固件
           - ⚽ 固件源码: ${{ env.REPO_URL }}
           - 💝 源码分支: ${{ env.REPO_BRANCH }}
-          - 🌐 默认地址: 192.168.1.1
+          - 🌐 默认地址: 192.168.2.1
           - 🔑 默认密码: password
           ### 🧊 固件版本
           - 固件编译前最后一次➦[主源码](${{ env.REPO_URL }})更新记录
