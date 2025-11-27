@@ -15,26 +15,21 @@ function git_sparse_clone() {
 # 添加额外插件
 #git clone --depth=1 https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
 #git clone --depth=1 -b openwrt-18.06 https://github.com/tty228/luci-app-wechatpush package/luci-app-wechatpush
-#git clone  https://github.com/gdy666/luci-app-lucky.git package/lucky
+git clone  https://github.com/gdy666/luci-app-lucky.git package/lucky
 #git_sparse_clone master https://github.com/vernesong/OpenClash luci-app-openclash
 #git_sparse_clone master https://github.com/kenzok8/openwrt-packages luci-app-adguardhome adguardhome luci-app-wechatpush
-
-# 更改 Argon 主题背景
-# cp -f $GITHUB_WORKSPACE/images/bg1.jpg package/luci-theme-argon/htdocs/luci-static/argon/img/bg1.jpg
+git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-onliner luci-app-floatip floatip luci-app-adguardhome adguardhome
 
 # MosDNS
 #git clone --depth=1 https://github.com/sbwml/luci-app-mosdns package/luci-app-mosdns
 
-# 在线用户
-git_sparse_clone main https://github.com/haiibo/packages luci-app-onliner
-
 echo "
 # 插件
-#CONFIG_PACKAGE_luci-app-smartdns=y 
+#CONFIG_PACKAGE_luci-app-smartdns=y
+#CONFIG_PACKAGE_luci-app-openclash=y
 CONFIG_PACKAGE_luci-app-adguardhome=y
 CONFIG_PACKAGE_luci-app-wechatpush=y
 CONFIG_PACKAGE_luci-app-lucky=y
-CONFIG_PACKAGE_luci-app-openclash=y
 CONFIG_PACKAGE_luci-app-onliner=y
 CONFIG_PACKAGE_luci-app-floatip=y
 " >> .config
@@ -51,6 +46,9 @@ sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generat
 # 修改默认主题
 sed -i 's/luci-theme-design/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
+
+# 更改 Argon 主题背景
+# cp -f $GITHUB_WORKSPACE/images/bg1.jpg package/luci-theme-argon/htdocs/luci-static/argon/img/bg1.jpg
 
 # 加入OpenClash核心
 #chmod -R a+x $GITHUB_WORKSPACE/preset-clash-core.sh
