@@ -32,7 +32,7 @@ CONFIG_PACKAGE_luci-app-openclash=m
 CONFIG_PACKAGE_luci-app-adguardhome=y
 CONFIG_PACKAGE_luci-app-wechatpush=y
 CONFIG_PACKAGE_luci-app-lucky=y
-#CONFIG_PACKAGE_luci-app-onliner=y
+CONFIG_PACKAGE_luci-app-onliner=y
 #CONFIG_PACKAGE_luci-app-floatip=y
 " >> .config
 
