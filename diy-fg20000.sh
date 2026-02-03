@@ -20,7 +20,7 @@ git_sparse_clone master https://github.com/vernesong/OpenClash luci-app-openclas
 git_sparse_clone master https://github.com/kenzok8/openwrt-packages luci-app-adguardhome adguardhome
 
 #git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-onliner luci-app-floatip floatip luci-app-adguardhome adguardhome
-git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-floatip floatip
+#git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-floatip floatip
 
 
 # MosDNS
@@ -33,7 +33,7 @@ CONFIG_PACKAGE_luci-app-adguardhome=y
 CONFIG_PACKAGE_luci-app-wechatpush=y
 CONFIG_PACKAGE_luci-app-lucky=y
 CONFIG_PACKAGE_luci-app-onliner=y
-CONFIG_PACKAGE_luci-app-floatip=y
+#CONFIG_PACKAGE_luci-app-floatip=y
 CONFIG_PACKAGE_luci-app-smartdns=y
 " >> .config
 
