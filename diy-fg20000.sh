@@ -20,7 +20,7 @@ git clone --depth=1 https://github.com/kongfl888/luci-app-adguardhome package/lu
 #git_sparse_clone master https://github.com/kenzok8/openwrt-packages luci-app-adguardhome adguardhome
 
 git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-onliner
-git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-floatip floatip
+git_sparse_clone main https://github.com/kenzok8/small-package luci-app-floatip floatip
 git_sparse_clone main https://github.com/kiddin9/kwrt-packages  luci-app-lucky lucky
 
 # MosDNS
