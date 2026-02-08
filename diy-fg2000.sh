@@ -20,7 +20,6 @@ function git_sparse_clone() {
 #git clone  https://github.com/gdy666/luci-app-lucky.git package/lucky
 #git_sparse_clone master https://github.com/vernesong/OpenClash luci-app-openclash
 git_sparse_clone master https://github.com/kenzok8/openwrt-packages luci-app-adguardhome adguardhome
-
 git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-onliner
 git_sparse_clone main https://github.com/kenzok8/small-package luci-app-floatip floatip
 git_sparse_clone main https://github.com/kiddin9/kwrt-packages  luci-app-lucky lucky
@@ -30,13 +29,10 @@ git_sparse_clone main https://github.com/kiddin9/kwrt-packages  luci-app-lucky l
 
 echo "
 # 插件
-CONFIG_PACKAGE_luci-app-openclash=m
 CONFIG_PACKAGE_luci-app-adguardhome=y
-CONFIG_PACKAGE_luci-app-wechatpush=y
+CONFIG_PACKAGE_luci-app-floatip=y
 CONFIG_PACKAGE_luci-app-lucky=y
 CONFIG_PACKAGE_luci-app-onliner=y
-CONFIG_PACKAGE_luci-app-smartdns=y
-CONFIG_PACKAGE_luci-app-floatip=y
 " >> .config
 
 # 修改默认IP
