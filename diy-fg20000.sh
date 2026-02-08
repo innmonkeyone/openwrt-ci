@@ -36,7 +36,7 @@ CONFIG_PACKAGE_luci-app-wechatpush=y
 CONFIG_PACKAGE_luci-app-lucky=y
 CONFIG_PACKAGE_luci-app-onliner=y
 CONFIG_PACKAGE_luci-app-smartdns=y
-#CONFIG_PACKAGE_luci-app-floatip=y
+CONFIG_PACKAGE_luci-app-floatip=y
 " >> .config
 
 # 修改默认IP
