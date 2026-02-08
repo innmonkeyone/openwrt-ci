@@ -1,6 +1,8 @@
 #!/bin/bash
 
 # 移除要替换的包
+# 移除luci-app-attendedsysupgrade软件包
+sed -i "/attendedsysupgrade/d" $(find ./feeds/luci/collections/ -type f -name "Makefile")
 
 # Git稀疏克隆，只克隆指定目录到本地
 function git_sparse_clone() {
