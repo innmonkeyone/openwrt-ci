@@ -38,47 +38,5 @@ CONFIG_PACKAGE_luci-app-onliner=y
 # 修改默认IP
 sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generate
 
-# 网卡补丁
-cat 731-net-aqr108-new.patch 
---- a/drivers/net/phy/aquantia/aquantia_main.c
-+++ b/drivers/net/phy/aquantia/aquantia_main.c
-@@ -34,6 +34,7 @@
- #define PHY_ID_AQR813  0x31c31cb2
- #define PHY_ID_AQR112C 0x03a1b790
- #define PHY_ID_AQR112R 0x31c31d12
-+#define PHY_ID_AQR108   0x03a1b4f0
- 
- #define MDIO_PHYXS_VEND_IF_STATUS              0xe812
- #define MDIO_PHYXS_VEND_IF_STATUS_TYPE_MASK    GENMASK(7, 3)
-@@ -1231,6 +1232,24 @@ static struct phy_driver aqr_driver[] =
-        .get_strings    = aqr107_get_strings,
-        .get_stats      = aqr107_get_stats,
- },
-+{
-+       PHY_ID_MATCH_MODEL(PHY_ID_AQR108),
-+       .name           = "Aquantia AQR108",
-+       .probe          = aqr107_probe,
-+       .config_init    = aqr107_config_init,
-+       .config_aneg    = aqr_config_aneg,
-+       .config_intr    = aqr_config_intr,
-+       .handle_interrupt = aqr_handle_interrupt,
-+       .read_status    = aqr107_read_status,
-+       .get_tunable    = aqr107_get_tunable,
-+       .set_tunable    = aqr107_set_tunable,
-+       .suspend        = aqr107_suspend,
-+       .resume         = aqr107_resume,
-+       .get_sset_count = aqr107_get_sset_count,
-+       .get_strings    = aqr107_get_strings,
-+       .get_stats      = aqr107_get_stats,
-+       .link_change_notify = aqr107_link_change_notify,
-+},
- };
-
-cat 731-net-aq-macsec.patch  
---- a/drivers/net/phy/aquantia/Makefile
-+++ b/drivers/net/phy/aquantia/Makefile
-@@ -1,0 +2,1 @@
-+aquantia-objs                   += aqr_macsec/aqr_macsec.o
-
 ./scripts/feeds update -a
 ./scripts/feeds install -a
