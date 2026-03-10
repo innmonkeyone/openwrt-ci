@@ -1,5 +1,8 @@
 #!/bin/bash
 
+#添加存储库
+sed -i '1i src-git rtp2httpd https://github.com/stackia/rtp2httpd.git' feeds.conf.default
+
 # 移除要替换的包
 # 移除luci-app-attendedsysupgrade软件包
 sed -i "/attendedsysupgrade/d" $(find ./feeds/luci/collections/ -type f -name "Makefile")
@@ -33,7 +36,7 @@ CONFIG_PACKAGE_luci-app-adguardhome=y
 CONFIG_PACKAGE_luci-app-floatip=y
 CONFIG_PACKAGE_luci-app-lucky=y
 CONFIG_PACKAGE_luci-app-onliner=y
-CONFIG_PACKAGE_luci-app-openclash=y
+CONFIG_PACKAGE_luci-app-rtp2httpd=y
 CONFIG_NET_PHY_AQUANTIA=y
 " >> .config
 
