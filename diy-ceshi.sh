@@ -20,9 +20,9 @@ function git_sparse_clone() {
 #git clone  https://github.com/gdy666/luci-app-lucky.git package/lucky
 #git_sparse_clone master https://github.com/vernesong/OpenClash luci-app-openclash
 git_sparse_clone master https://github.com/kenzok8/openwrt-packages luci-app-adguardhome adguardhome
-git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-onliner
-git_sparse_clone main https://github.com/kenzok8/small-package luci-app-floatip floatip
-git_sparse_clone main https://github.com/kiddin9/kwrt-packages  luci-app-lucky lucky
+git_sparse_clone main https://github.com/kiddin9/op-packages luci-app-onliner
+git_sparse_clone Immortalwrt https://github.com/shidahuilang/openwrt-package luci-app-floatip floatip
+git_sparse_clone main https://github.com/kiddin9/op-packages  luci-app-lucky lucky
 
 # MosDNS
 #git clone --depth=1 https://github.com/sbwml/luci-app-mosdns package/luci-app-mosdns
