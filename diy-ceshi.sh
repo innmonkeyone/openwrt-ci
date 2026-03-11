@@ -27,16 +27,6 @@ git_sparse_clone main https://github.com/kiddin9/kwrt-packages  luci-app-lucky l
 # MosDNS
 #git clone --depth=1 https://github.com/sbwml/luci-app-mosdns package/luci-app-mosdns
 
-git clone https://github.com/stackia/rtp2httpd.git
-cd rtp2httpd
-
-# 用预生成的 Makefile 替换原始 Makefile（已包含固定版本号、源码下载地址和 PKG_HASH）
-mv openwrt-support/rtp2httpd/Makefile.versioned openwrt-support/rtp2httpd/Makefile
-mv openwrt-support/luci-app-rtp2httpd/Makefile.versioned openwrt-support/luci-app-rtp2httpd/Makefile
-
-# 将 openwrt-support 目录内容复制到你的 feeds 仓库
-cp -r openwrt-support/* feeds/packages/rtp2httpd
-
 echo "
 # 插件
 CONFIG_PACKAGE_luci-app-adguardhome=y
