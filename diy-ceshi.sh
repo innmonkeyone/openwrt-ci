@@ -27,6 +27,11 @@ git_sparse_clone main https://github.com/kiddin9/op-packages  luci-app-lucky luc
 # MosDNS
 #git clone --depth=1 https://github.com/sbwml/luci-app-mosdns package/luci-app-mosdns
 
+# 加入新储存库
+echo "src-git rtp2httpd https://github.com/stackia/rtp2httpd.git" >> "feeds.conf.default"
+
+
+
 echo "
 # 插件
 CONFIG_PACKAGE_luci-app-adguardhome=y
