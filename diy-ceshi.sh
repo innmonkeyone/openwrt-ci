@@ -35,6 +35,9 @@ echo "
 CONFIG_PACKAGE_luci-app-adguardhome=y
 CONFIG_PACKAGE_luci-app-lucky=y
 CONFIG_PACKAGE_luci-app-rtp2httpd=y
+CONFIG_PACKAGE_luci-app-quickfile=y
+CONFIG_PACKAGE_luci-app-wechatpush=y
+CONFIG_PACKAGE_luci-app-autoreboot=y
 CONFIG_NET_PHY_AQUANTIA=y
 " >> .config
 
