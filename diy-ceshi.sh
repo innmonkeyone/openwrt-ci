@@ -22,14 +22,6 @@ git clone https://github.com/sbwml/luci-app-quickfile package/quickfile
 git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
 git_sparse_clone master https://github.com/kenzok8/openwrt-packages luci-app-adguardhome adguardhome
 
-git clone https://github.com/stackia/rtp2httpd.git
-cd rtp2httpd
-# 用预生成的 Makefile 替换原始 Makefile（已包含固定版本号、源码下载地址和 PKG_HASH）
-mv openwrt-support/rtp2httpd/Makefile.versioned openwrt-support/rtp2httpd/Makefile
-mv openwrt-support/luci-app-rtp2httpd/Makefile.versioned openwrt-support/luci-app-rtp2httpd/Makefile
-# 将 openwrt-support 目录内容复制到你的 feeds 仓库
-cp -r openwrt-support/* package/luci-app-rtp2httpd
-
 echo "
 # 插件
 CONFIG_PACKAGE_luci-app-adguardhome=y
