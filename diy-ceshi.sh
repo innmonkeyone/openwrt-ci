@@ -3,6 +3,9 @@
 # 移除要替换的包
 # 移除luci-app-attendedsysupgrade软件包
 sed -i "/attendedsysupgrade/d" $(find ./feeds/luci/collections/ -type f -name "Makefile")
+rm -rf feeds/luci/themes/luci-theme-argon
+rm -rf feeds/luci/applications/luci-app-adguardhome
+
 
 # Git稀疏克隆，只克隆指定目录到本地
 function git_sparse_clone() {
@@ -16,6 +19,16 @@ function git_sparse_clone() {
 
 # 添加额外插件
 git clone https://github.com/sbwml/luci-app-quickfile package/quickfile
+git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
+git_sparse_clone master https://github.com/kenzok8/openwrt-packages luci-app-adguardhome adguardhome
+
+git clone https://github.com/stackia/rtp2httpd.git
+cd rtp2httpd
+# 用预生成的 Makefile 替换原始 Makefile（已包含固定版本号、源码下载地址和 PKG_HASH）
+mv openwrt-support/rtp2httpd/Makefile.versioned openwrt-support/rtp2httpd/Makefile
+mv openwrt-support/luci-app-rtp2httpd/Makefile.versioned openwrt-support/luci-app-rtp2httpd/Makefile
+# 将 openwrt-support 目录内容复制到你的 feeds 仓库
+cp -r openwrt-support/* package/luci-app-rtp2httpd
 
 echo "
 # 插件
