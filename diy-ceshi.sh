@@ -25,6 +25,7 @@ git_sparse_clone master https://github.com/kenzok8/openwrt-packages luci-app-adg
 echo "
 # 插件
 CONFIG_PACKAGE_luci-app-adguardhome=y
+CONFIG_PACKAGE_luci-app-adguardhome_INCLUDE_binary=y
 CONFIG_PACKAGE_luci-app-rtp2httpd=y
 CONFIG_PACKAGE_luci-app-quickfile=y
 CONFIG_PACKAGE_luci-app-wechatpush=y
