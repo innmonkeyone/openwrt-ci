@@ -18,7 +18,7 @@ function git_sparse_clone() {
 }
 
 # 添加额外插件
-git clone https://github.com/sbwml/luci-app-quickfile package/quickfile
+#git clone https://github.com/sbwml/luci-app-quickfile package/quickfile
 git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
 git_sparse_clone master https://github.com/kenzok8/openwrt-packages luci-app-adguardhome adguardhome
 
@@ -27,7 +27,7 @@ echo "
 CONFIG_PACKAGE_luci-app-adguardhome=y
 CONFIG_PACKAGE_luci-app-adguardhome_INCLUDE_binary=y
 CONFIG_PACKAGE_luci-app-rtp2httpd=y
-CONFIG_PACKAGE_luci-app-quickfile=y
+#CONFIG_PACKAGE_luci-app-quickfile=y
 CONFIG_PACKAGE_luci-app-wechatpush=y
 CONFIG_PACKAGE_luci-app-autoreboot=y
 CONFIG_PACKAGE_luci-app-sqm=y
