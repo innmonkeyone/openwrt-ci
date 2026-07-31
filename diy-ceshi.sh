@@ -3,7 +3,6 @@
 # 移除要替换的包
 # 移除luci-app-attendedsysupgrade软件包
 sed -i "/attendedsysupgrade/d" $(find ./feeds/luci/collections/ -type f -name "Makefile")
-rm -rf feeds/luci/themes/luci-theme-argon
 rm -rf feeds/luci/applications/luci-app-adguardhome
 rm -rf feeds/packages/net/adguardhome
 
@@ -19,7 +18,6 @@ function git_sparse_clone() {
 
 # 添加额外插件
 #git clone https://github.com/sbwml/luci-app-quickfile package/quickfile
-git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
 git_sparse_clone master https://github.com/kenzok8/openwrt-packages luci-app-adguardhome adguardhome
 
 echo "
