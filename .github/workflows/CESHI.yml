@@ -2,8 +2,8 @@ name: Fg2000-CESHI
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: 0 1 1 * *
+#  schedule:
+#    - cron: 0 1 1 * *
 
 env:
   REPO_URL: https://github.com/LiBwrt/openwrt-6.x.git
